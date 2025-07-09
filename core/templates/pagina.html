@@ -1,0 +1,274 @@
+{% extends "spalayout.html" %}
+{% load static %}
+
+{% block title %}Aurora420 | Página principal{% endblock %}
+
+{% block content %}
+
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+
+  <!-- Logo ortada -->
+  <div class="hero-logo" data-aos="fade-up">
+    <img src="{% static 'images/12.png' %}" alt="Logo">
+  </div>
+
+  <!-- Yazı + Buton -->
+  <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+    <h1>BIENVENIDO A NUESTRO CLUB SOCIAL EXCLUSIVO</h1>
+    <p>
+      En nuestro club, promovemos un ambiente acogedor y amigable donde nuestros socios pueden disfrutar de experiencias únicas. Únete a nosotros y descubre los beneficios de ser parte de nuestra comunidad.
+    </p>
+    <a href="#inicio" class="btn-contact" data-aos="fade-up" data-aos-delay="400">Empecemos</a>
+    <a href="#contact" class="btn-contact" data-aos="fade-up" data-aos-delay="400">Contact Us</a>
+  </div>
+</section>
+
+<section id="inicio" class="community-section">
+    <div class="community-container" data-aos="fade-up">
+        
+        <!-- Görsel -->
+        <div class="community-image">
+        <img src="{% static 'images/comcom.png' %}" alt="Comunidad" />
+        </div>
+
+        <!-- Yazı alanı -->
+        <div class="community-text">
+        <h6>Conexión</h6>
+        <h2>Nuestra comunidad, tu espacio de bienestar</h2>
+        <p>
+            En nuestro club, promovemos un ambiente de respeto y camaradería.
+            Creemos en el poder de la comunidad para enriquecer la experiencia de cada socio.
+        </p>
+        <div class="community-buttons">
+            <a href="#contact" class="btn-outline">Únete</a>
+            <a href="#beneficios" class="btn-arrow">Descubre →</a>
+        </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="beneficios" class="benefits-section">
+    <div class="benefits-container">
+
+        <!-- Başlık -->
+        <div class="benefits-header" data-aos="fade-up">
+        <h2>Beneficios de ser socio</h2>
+        <p>Acceso a eventos exclusivos y descuentos especiales.</p>
+        </div>
+
+        <!-- Kartlar -->
+        <div class="benefits-cards">
+
+            <!-- Tarjeta grande -->
+            <div class="benefit-card large-card" data-aos="fade-left">
+                <img src="{% static 'images/benefit1.png' %}" alt="Beneficios de la membresía">
+                <div class="card-text">
+                    <h5>Exclusividad</h5>
+                    <h3>Ventajas de nuestra membresía</h3>
+                    <p>Conéctate con una comunidad vibrante y acogedora.</p>
+                    <a href="#contact">Únete →</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta pequeña 1 -->
+            <div class="benefit-card" data-aos="fade-left">
+                <img src="{% static 'images/benefit2.png' %}" alt="Eventos">
+                <div class="card-text">
+                    <h5>Conexión</h5>
+                    <h3>Eventos únicos</h3>
+                    <p>Participa en actividades exclusivas solo para miembros.</p>
+                    <a href="#eventos">Descubre →</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta pequeña 2 -->
+            <div class="benefit-card" data-aos="fade-left">
+                <img src="{% static 'images/benefit3.png' %}" alt="Descuentos">
+                <div class="card-text">
+                    <h5>Ahorro</h5>
+                    <h3>Descuentos especiales</h3>
+                    <p>Aprovecha ofertas en productos seleccionados para socios.</p>
+                    <a href="#event-list">Explora →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="eventos" class="eventos-section">
+  <div class="eventos-container" data-aos="fade-up">
+    <h2>Descubre nuestros eventos especiales y<br>actividades exclusivas para socios.</h2>
+
+    <div class="eventos-cards" data-aos="fade-left">
+
+      <!-- Kart 1 -->
+      <div class="evento-card">
+        <div class="icon">🏛️</div>
+        <h3>Participa en fiestas temáticas y<br>talleres educativos únicos.</h3>
+        <p>Ofrecemos experiencias inolvidables que fomentan la comunidad y el aprendizaje.</p>
+        <a href="#contact">Únete →</a>
+      </div>
+
+      <!-- Kart 2 -->
+      <div class="evento-card">
+        <div class="icon">🪙</div>
+        <h3>Asiste a charlas educativas<br>sobre bienestar y cultura.</h3>
+        <p>Aprende de expertos en un ambiente amigable y acogedor.</p>
+        <a href="#contact">Inscríbete →</a>
+      </div>
+
+      <!-- Kart 3 -->
+      <div class="evento-card">
+        <div class="icon">🔗</div>
+        <h3>Disfruta de talleres prácticos<br>que enriquecen tu conocimiento.</h3>
+        <p>Desarrolla nuevas habilidades mientras te diviertes con otros miembros.</p>
+        <a href="#contact">Regístrate →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="event-list" class="event-list-section">
+    <div class="event-list-container">
+        <h2 class="event-list-title" data-aos="fade-up">Eventos</h2>
+
+        <!-- Evento 1: Partido de fútbol -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Vie</span>
+                <span class="number">12</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">20:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Partido de fútbol en pantalla grande</h3>
+                <p>Disfruta el partido con otros miembros en un ambiente relajado y social.</p>
+            </div>
+        </div>
+
+        <!-- Evento 2: Juegos de cartas -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Sab</span>
+                <span class="number">13</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">18:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Noche de juegos de cartas</h3>
+                <p>Ven a compartir una velada divertida con clásicos como Uno, Poker y más.</p>
+            </div>
+        </div>
+
+        <!-- Evento 3: Juegos de mesa -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Dom</span>
+                <span class="number">14</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">17:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Sesión de juegos de mesa</h3>
+                <p>Descubre nuevos juegos o revive tus favoritos con otros socios en el lounge.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="gallery" class="gallery-section">
+  <h2>Galería</h2>
+  <div class="gallery-grid">
+
+    <!-- ✅ Resimler de siempre (static) -->
+    <img src="{% static 'images/header.jpg' %}" alt="Imagen 1" onclick="openModal(this)">
+    <img src="{% static 'images/draw.png' %}" alt="Imagen 2" onclick="openModal(this)">
+    <img src="{% static 'images/sarki.png' %}" alt="Imagen 3" onclick="openModal(this)">
+    <img src="{% static 'images/talking.png' %}" alt="Imagen 4" onclick="openModal(this)">
+    <img src="{% static 'images/weed.png' %}" alt="Imagen 5" onclick="openModal(this)">
+    <img src="{% static 'images/movie.png' %}" alt="Imagen 6" onclick="openModal(this)">
+
+    <!-- ✅ Desde admin panel (dinámico) -->
+    {% for image in gallery_images %}
+      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)">
+    {% endfor %}
+
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+</section>
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <!-- IZQUIERDA: Formulario de contacto -->
+    <div class="contact-form">
+      <h2>Contáctanos</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <form method="POST" action="{% url 'contact_submit' %}">
+        {% csrf_token %}
+
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="Tu correo" required />
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="terms" required />
+            <label for="terms">Acepto los términos</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <!-- DERECHA: Mapa -->
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4219.805966063547!2d-16.292895592125195!3d28.468365929635507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1str!2ses!4v1751906645761!5m2!1str!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- ALT: Newsletter -->
+<div class="newsletter">
+  <div class="newsletter-text">
+  <h4>Join our newsletter</h4>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <form class="newsletter-form" method="POST" action="{% url 'subscribe' %}">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required />
+    
+    <div class="checkbox-group">
+        <input type="checkbox" id="accept_news" required />
+        <label for="accept_news">Acepto los términos</label>
+    </div>
+
+    <button type="submit">Suscribirse</button>
+  </form>
+</div>
+
+<section class="follow-instagram">
+  <a href="https://www.instagram.com/aurora420club?igsh=MTV3NXlzbWVvcTVnbA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-instagram"></i>
+    <span class="follow-text">Síguenos en Instagram</span>
+  </a>
+</section>
+
+
+
+{% endblock content %}

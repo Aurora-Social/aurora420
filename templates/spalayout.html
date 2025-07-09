@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Aurora420{% endblock %}</title>
+  <link rel="icon" type="image/png" href="{% static 'images/6.png' %}">
+
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/all.min.css' %}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<header id="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+        <a href="#">
+            <img src="{% static 'images/12.png' %}" alt="Logo">
+        </a>
+    </div>
+    <!-- Hamburger Menü Butonu (Mobil) -->
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav-links">
+      <a href="#inicio">Empecemos</a>
+      <a href="#beneficios">Beneficios Socios</a>
+      <a href="#eventos">Eventos Especiales</a>
+      <a href="#contact">Contáctanos</a>
+      <div class="lang-switch">
+        <a href="/" class="lang-btn">ES</a>
+        <a href="/en" class="lang-btn">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% if messages %}
+    <div class="flash-wrapper">
+      {% for message in messages %}
+        <div class="flash-card {% if message.tags %}{{ message.tags }}{% endif %}">
+          <div class="flash-icon">💌 Mensaje</div>
+          <div class="flash-text">{{ message }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <script>
+      setTimeout(function () {
+        const flash = document.querySelector('.flash-wrapper');
+        if (flash) {
+          flash.style.display = 'none';
+        }
+      }, 4000);
+    </script>
+  {% endif %}
+
+
+  
+  {% block content %}{% endblock content %}
+</main>
+
+
+ 
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Izquierda: Logo + Descripción -->
+    <div class="footer-logo">
+      <img src="{% static 'images/12.png' %}" alt="Aurora420 Logo" />
+      <p class="footer-description">
+        Aurora420 es un club social privado ubicado en Tenerife. Ofrecemos un entorno seguro, inclusivo e inspirador para los amantes del cannabis.
+      </p>
+    </div>
+
+    <!-- Centro: Enlaces -->
+    <div class="footer-links">
+      <h4>Club Aurora420</h4>
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#inicio">Comunidad</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#events">Eventos</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Derecha: Contacto -->
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><strong>Email:</strong> <a href="mailto:info@aurora420.org">info@aurora420.org</a></p>
+      <p><strong>Ubicación:</strong> Tenerife, Islas Canarias</p>
+      <p><strong>Horario:</strong><br>Lunes – Domingo: 10:00 – 22:00</p>
+
+      <!-- Instagram ikonu burada -->
+      <div class="footer-social-icon">
+        <a href="https://www.instagram.com/aurora420club?igsh=MTV3NXlzbWVvcTVnbA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Aurora420. Todos los derechos reservados.</p>
+
+    <!-- Dil Değiştirici -->
+    <div class="footer-language">
+      <a href="/">ES</a> | <a href="/en/">EN</a>
+    </div>
+  </div>
+
+</footer>
+
+
+<!-- Scripts -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: false, duration: 1200, offset: 100 });
+</script>
+
+<script>
+  function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+
+  // Tüm linklere tıklanınca menüyü kapat
+  document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelector('.nav-links');
+    const navItems = navLinks.querySelectorAll('a');
+
+    navItems.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
