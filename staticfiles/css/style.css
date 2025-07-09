@@ -5,14 +5,29 @@ html, body {
 
 /* ===== Navbar Genel Stil ===== */
 #navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  background: transparent; /* Şeffaf arka plan */
   z-index: 1000;
   padding: 10px 30px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
   font-family: 'Poppins', sans-serif;
+}
+
+/* Sayfa en üstteyken şeffaf navbar (blur yok) */
+.navbar-transparent {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Scroll yapılınca blur ve arkaplan gelsin */
+.navbar-blur {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Navbar konteyner */
@@ -148,6 +163,15 @@ html, body {
   }
 }
 
+/* Navbar başlangıçta görünsün */
+#navbar.navbar-show {
+  transform: translateY(0);
+}
+
+/* Scroll ile yukarıdan kaybolsun */
+#navbar.navbar-hide {
+  transform: translateY(-100%);
+}
 
 
 

@@ -159,6 +159,35 @@
   });
 </script>
 
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    navbar.classList.add("navbar-show", "navbar-transparent");
+  });
+
+  window.addEventListener("scroll", function () {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll === 0) {
+      // Sayfa en üstte: görünür + şeffaf
+      navbar.classList.remove("navbar-hide");
+      navbar.classList.add("navbar-show", "navbar-transparent");
+      navbar.classList.remove("navbar-blur");
+    } else if (currentScroll > lastScrollTop) {
+      // Aşağı: gizle
+      navbar.classList.remove("navbar-show");
+      navbar.classList.add("navbar-hide");
+    } else {
+      // Yukarı: göster + blur ekle
+      navbar.classList.remove("navbar-hide", "navbar-transparent");
+      navbar.classList.add("navbar-show", "navbar-blur");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  }, false);
+</script>
 
 </body>
 </html>
