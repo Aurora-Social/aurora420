@@ -17,21 +17,19 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from django.shortcuts import render
-from core.views import contact_form_submit, subscribe_newsletter
 
-# Görünüm fonksiyonları
-def index(request):
-    return render(request, 'index.html')
-
-def pagina(request):
-    return render(request, 'pagina.html')
+from core.views import (
+    contact_form_submit,
+    subscribe_newsletter,
+    index_view,
+    spanish_homepage
+)
 
 urlpatterns = [
-    path('', pagina),
-    path('pagina/', pagina),
-    path('en/', index),
-    path('en/index', index),
+    path('', spanish_homepage),
+    path('pagina/', spanish_homepage),
+    path('en/', index_view),
+    path('en/index', index_view),
     path('admin/', admin.site.urls),
     path('subscribe/', subscribe_newsletter, name='subscribe'),
     path('contact-submit/', contact_form_submit, name='contact_submit'),

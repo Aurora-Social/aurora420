@@ -35,4 +35,4 @@ class ContactAdmin(admin.ModelAdmin):
 # 🔹 Galeri admini – sadece görselleri göstermek için, CSV özelliği yok
 @admin.register(GalleryImage)
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('title', 'image', 'uploaded_at')
+    list_display = ('image', 'uploaded_at')
