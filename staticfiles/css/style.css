@@ -1001,6 +1001,9 @@ html {
 .footer-contact {
   flex: 1;
   min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* önce bu vardı büyük ihtimal */
 }
 
 .footer-contact p {
@@ -1019,40 +1022,28 @@ html {
 }
 
 .footer-bottom {
+  padding: 20px 0;
   text-align: center;
-  margin-top: 40px;
-  font-size: 12px;
-  color: #666;
-}
-
-
-
-
-
-
-
-
-
-
-.footer-bottom {
-  position: relative;
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #11111100; /* varsa footer rengine göre */
+  background-color: transparent;
   color: white;
+  font-size: 16px; /* 14px yerine 16px */
+  margin-top: 40px;
 }
+
 
 .footer-language {
-  position: absolute;
-  bottom: 10px;
-  right: 30px;
+  margin-top: 15px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
+
 
 .footer-language a {
   color: white;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 8px;
   font-weight: bold;
   transition: color 0.2s ease;
 }
@@ -1208,13 +1199,37 @@ html {
 }
 
 .footer-social-icon a {
-  color: #e1306c;
   font-size: 22px;
   text-decoration: none;
   transition: transform 0.3s ease;
   display: inline-block;
+  margin-right: 15px;
 }
 
-.footer-social-icon a:hover {
+/* 🔴 Instagram (pembe) */
+.footer-social-icon a.icon-instagram {
+  color: #e1306c;
+}
+
+.footer-social-icon a.icon-instagram:hover {
   transform: scale(1.2);
 }
+
+/* 💚 WhatsApp (yeşil) */
+.footer-social-icon a.icon-whatsapp {
+  color: #25D366;
+}
+
+.footer-social-icon a.icon-whatsapp:hover {
+  transform: scale(1.2);
+}
+
+/* 💙 Email (mavi) */
+.footer-social-icon a.icon-email {
+  color: #1DA1F2;
+}
+
+.footer-social-icon a.icon-email:hover {
+  transform: scale(1.2);
+}
+
