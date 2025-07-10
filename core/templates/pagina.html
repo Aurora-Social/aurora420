@@ -15,39 +15,61 @@
 
   <!-- Yazı + Buton -->
   <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-    <h1>BIENVENIDO A NUESTRO CLUB SOCIAL EXCLUSIVO</h1>
+    <h1>¡BIENVENIDO A AURORA420, NUESTRO CLUB SOCIAL EXCLUSIVO!</h1>
     <p>
       En nuestro club, promovemos un ambiente acogedor y amigable donde nuestros socios pueden disfrutar de experiencias únicas. Únete a nosotros y descubre los beneficios de ser parte de nuestra comunidad.
     </p>
     <a href="#inicio" class="btn-contact" data-aos="fade-up" data-aos-delay="400">Empecemos</a>
-    <a href="#contact" class="btn-contact" data-aos="fade-up" data-aos-delay="400">Contact Us</a>
+    <a href="#contact" class="btn-contact" data-aos="fade-up" data-aos-delay="400">Contáctanos</a>
   </div>
 </section>
 
 <section id="inicio" class="community-section">
-    <div class="community-container" data-aos="fade-up">
-        
-        <!-- Görsel -->
-        <div class="community-image">
-        <img src="{% static 'images/comcom.png' %}" alt="Comunidad" />
-        </div>
-
-        <!-- Yazı alanı -->
-        <div class="community-text">
-        <h6>Conexión</h6>
-        <h2>Nuestra comunidad, tu espacio de bienestar</h2>
-        <p>
-            En nuestro club, promovemos un ambiente de respeto y camaradería.
-            Creemos en el poder de la comunidad para enriquecer la experiencia de cada socio.
-        </p>
-        <div class="community-buttons">
-            <a href="#contact" class="btn-outline">Únete</a>
-            <a href="#beneficios" class="btn-arrow">Descubre →</a>
-        </div>
-        </div>
-
+  <!-- BLOQUE 1: GÖRSEL SOLDAYDI -->
+  <div class="community-container" data-aos="fade-up">
+    
+    <!-- Görsel -->
+    <div class="community-image">
+      <img src="{% static 'images/comcom.png' %}" alt="Comunidad" />
     </div>
+
+    <!-- Yazı alanı -->
+    <div class="community-text">
+      <h6>Conexión</h6>
+      <h2>Nuestra comunidad, tu espacio de bienestar</h2>
+      <p>
+        En nuestro club, promovemos un ambiente de respeto y camaradería.
+        Creemos en el poder de la comunidad para enriquecer la experiencia de cada socio.
+      </p>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2: GÖRSEL SAĞDA -->
+  <div class="community-container reverse" data-aos="fade-up">
+    
+    <!-- Yazı alanı -->
+    <div class="community-text">
+      <h6>Exploración</h6>
+      <h2>Descubre nuevas experiencias en cada visita</h2>
+      <p>
+        Cada rincón de nuestro club está diseñado para sorprenderte.  
+        Vive momentos únicos y forma parte de algo extraordinario.
+      </p>
+    </div>
+
+    <!-- Görsel -->
+    <div class="community-image">
+      <img src="{% static 'images/ourstory.png' %}" alt="Experiencia" />
+    </div>
+  </div>
+
+  <!-- BUTONLAR ORTA ALTA -->
+  <div class="community-buttons center-buttons" data-aos="fade-up">
+    <a href="#contact" class="btn-outline">Únete</a>
+    <a href="#beneficios" class="btn-arrow">Descubre →</a>
+  </div>
 </section>
+
 
 <section id="beneficios" class="benefits-section">
     <div class="benefits-container">
@@ -79,57 +101,63 @@
                     <h5>Conexión</h5>
                     <h3>Eventos únicos</h3>
                     <p>Participa en actividades exclusivas solo para miembros.</p>
-                    <a href="#eventos">Descubre →</a>
+                    <a href="#event-list">Descubre →</a>
                 </div>
             </div>
 
             <!-- Tarjeta pequeña 2 -->
+            <!-- Tarjeta Pequeña 2 -->
             <div class="benefit-card" data-aos="fade-left">
-                <img src="{% static 'images/benefit3.png' %}" alt="Descuentos">
+                <img src="{% static 'images/ourteam.png' %}" alt="Ambiente Amistoso">
                 <div class="card-text">
-                    <h5>Ahorro</h5>
-                    <h3>Descuentos especiales</h3>
-                    <p>Aprovecha ofertas en productos seleccionados para socios.</p>
-                    <a href="#event-list">Explora →</a>
+                    <h5>Comunidad</h5>
+                    <h3>Buen Ambiente</h3>
+                    <p>Comparte buenos momentos, conoce personas afines y siéntete como en casa en un entorno cálido.</p>
+                    <a href="#eventos">Explorar →</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="eventos" class="eventos-section">
-  <div class="eventos-container" data-aos="fade-up">
-    <h2>Descubre nuestros eventos especiales y<br>actividades exclusivas para socios.</h2>
+<section id="events" class="eventos-section">
+    <div class="eventos-container" data-aos="fade-up">
+        
+        <h2>Descubre nuestros eventos especiales y<br>actividades exclusivas para miembros.</h2>
 
-    <div class="eventos-cards" data-aos="fade-left">
+        <div class="eventos-cards" data-aos="fade-left">
 
-      <!-- Kart 1 -->
-      <div class="evento-card">
-        <div class="icon">🏛️</div>
-        <h3>Participa en fiestas temáticas y<br>talleres educativos únicos.</h3>
-        <p>Ofrecemos experiencias inolvidables que fomentan la comunidad y el aprendizaje.</p>
-        <a href="#contact">Únete →</a>
-      </div>
+            <!-- Tarjeta 1 -->
+            <div class="evento-card">
+                <div class="icon">🏛️</div>
+                <h3>Participa en fiestas temáticas y<br>talleres educativos únicos.</h3>
+                <p>Ofrecemos experiencias inolvidables que fomentan la comunidad y el aprendizaje.</p>
+            </div>
 
-      <!-- Kart 2 -->
-      <div class="evento-card">
-        <div class="icon">🪙</div>
-        <h3>Asiste a charlas educativas<br>sobre bienestar y cultura.</h3>
-        <p>Aprende de expertos en un ambiente amigable y acogedor.</p>
-        <a href="#contact">Inscríbete →</a>
-      </div>
+            <!-- Tarjeta 2 -->
+            <div class="evento-card">
+                <div class="icon">🪙</div>
+                <h3>Asiste a charlas educativas<br>sobre bienestar y cultura.</h3>
+                <p>Aprende de expertos en un ambiente cálido y acogedor.</p>
+            </div>
 
-      <!-- Kart 3 -->
-      <div class="evento-card">
-        <div class="icon">🔗</div>
-        <h3>Disfruta de talleres prácticos<br>que enriquecen tu conocimiento.</h3>
-        <p>Desarrolla nuevas habilidades mientras te diviertes con otros miembros.</p>
-        <a href="#contact">Regístrate →</a>
-      </div>
+            <!-- Tarjeta 3 -->
+            <div class="evento-card">
+                <div class="icon">🔗</div>
+                <h3>Disfruta de talleres prácticos<br>que enriquecen tus conocimientos.</h3>
+                <p>Desarrolla nuevas habilidades mientras te diviertes con otros miembros.</p>
+            </div>
 
+        </div>
+
+        <!-- Botón central -->
+        <div class="eventos-button-center" data-aos="fade-left">
+            <a href="#contact" class="btn-flat-green">¡Únete!</a>
+        </div>
+        
     </div>
-  </div>
 </section>
+
 
 <section id="event-list" class="event-list-section">
     <div class="event-list-container">

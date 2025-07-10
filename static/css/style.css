@@ -30,6 +30,9 @@ html, body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+
+
+
 /* Navbar konteyner */
 .navbar-container {
   display: flex;
@@ -134,7 +137,7 @@ html, body {
   .nav-links {
     flex-direction: column;
     align-items: flex-end;
-    background: rgba(0, 0, 0, 0.459);
+    background: rgba(0, 0, 0, 0.685);
     position: absolute;
     top: 70px;
     right: 0;
@@ -172,6 +175,7 @@ html, body {
 #navbar.navbar-hide {
   transform: translateY(-100%);
 }
+
 
 
 
@@ -246,6 +250,14 @@ html, body {
   background-color: #a1e25f;
 }
 
+/* Mobilde logo gizle */
+@media (max-width: 768px) {
+  .hero-logo {
+    display: none;
+  }
+}
+
+
 
 
 
@@ -304,6 +316,12 @@ html, body {
   display: flex;
   gap: 15px;
 }
+
+/* Ortalanmış butonlar için özel sınıf */
+.community-buttons.center-buttons {
+  justify-content: center;
+}
+
 
 /* Butonlar */
 .btn-outline {
@@ -570,16 +588,23 @@ html, body {
   min-height: 60px;
 }
 
-.evento-card a {
-  font-size: 14px;
+
+.btn-flat-green {
+  font-size: 16px;
+  font-weight: 500;
   color: #C1FF72;
   text-decoration: none;
-  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
 }
 
-.evento-card a:hover {
+.btn-flat-green:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
+
 
 
 
@@ -928,6 +953,19 @@ html {
   }
 }
 
+@media (max-width: 768px) {
+  .contact-map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    width: 100% !important;
+    height: auto;
+    max-width: 100%;
+  }
+}
 
 
 
@@ -1051,6 +1089,7 @@ html {
 .footer-language a:hover {
   color: #C1FF72;
 }
+
 
 
 
@@ -1232,4 +1271,6 @@ html {
 .footer-social-icon a.icon-email:hover {
   transform: scale(1.2);
 }
+
+
 

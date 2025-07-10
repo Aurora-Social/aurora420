@@ -16,7 +16,7 @@
 
     <!-- Yazı + Buton -->
     <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-        <h1>WELCOME TO OUR EXCLUSIVE SOCIAL CLUB</h1>
+        <h1>WELCOME TO AURORA420, OUR EXCLUSIVE SOCIAL CLUB!</h1>
         <p>
         At our club, we foster a warm and friendly atmosphere where members enjoy unique experiences.<br>
         Join us and discover the benefits of being part of our community.
@@ -32,25 +32,46 @@
         
         <!-- Image -->
         <div class="community-image">
-        <img src="{% static 'images/comcom.png' %}" alt="Our Community" />
+            <img src="{% static 'images/comcom.png' %}" alt="Our Community" />
         </div>
 
         <!-- Text -->
         <div class="community-text">
-        <h1>Aurora420</h1>
-        <h2>Our community, your space of well-being</h2>
-        <p>
-            At our club, we promote an atmosphere of respect and camaraderie.
-            We believe in the power of community to enrich the experience of every member.
-        </p>
-        <div class="community-buttons">
-            <a href="#contact" class="btn-outline">Join</a>
-            <a href="#beneficios" class="btn-arrow">Discover →</a>
+            <h6>Connection</h6>
+            <h2>Our community, your space of well-being</h2>
+            <p>
+                At our club, we promote an atmosphere of respect and camaraderie.  
+                We believe in the power of community to enrich the experience of every member.
+            </p>
         </div>
+    </div>
+
+    <!-- Second Block with reversed layout -->
+    <div class="community-container reverse" data-aos="fade-up">
+        
+        <!-- Text -->
+        <div class="community-text">
+            <h6>Exploration</h6>
+            <h2>Discover new experiences with every visit</h2>
+            <p>
+                Every corner of our club is designed to surprise you.  
+                Enjoy unique moments and be part of something extraordinary.
+            </p>
         </div>
 
+        <!-- Image -->
+        <div class="community-image">
+            <img src="{% static 'images/ourstory.png' %}" alt="New Experiences" />
+        </div>
+    </div>
+
+    <!-- Centered Buttons -->
+    <div class="community-buttons center-buttons" data-aos="fade-up">
+        <a href="#contact" class="btn-outline">Join</a>
+        <a href="#beneficios" class="btn-arrow">Discover →</a>
     </div>
 </section>
+
 
 <section id="beneficios" class="benefits-section">
     <div class="benefits-container" data-aos="fade-up">
@@ -82,27 +103,28 @@
                 <h5>Connection</h5>
                 <h3>Unique Events</h3>
                 <p>Join exclusive member-only experiences and activities.</p>
-                <a href="#eventos">Discover →</a>
+                <a href="#event-list">Discover →</a>
                 </div>
             </div>
 
             <!-- Small Card 2 -->
+            <!-- Small Card 2 -->
             <div class="benefit-card">
-                <img src="{% static 'images/benefit3.png' %}" alt="Discounts">
+                <img src="{% static 'images/ourteam.png' %}" alt="Friendly Atmosphere">
                 <div class="card-text">
-                <h5>Savings</h5>
-                <h3>Special Discounts</h3>
-                <p>Enjoy offers on selected products for members.</p>
-                <a href="#event-list">Explore →</a>
+                    <h5>Community</h5>
+                    <h3>Friendly Vibes</h3>
+                    <p>Share good times, meet like-minded people, and feel at home in our warm environment.</p>
+                    <a href="#events">Explore →</a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
 <section id="events" class="eventos-section">
     <div class="eventos-container" data-aos="fade-up">
+        
         <h2>Discover our special events and<br>exclusive activities for members.</h2>
 
         <div class="eventos-cards" data-aos="fade-left">
@@ -112,7 +134,6 @@
                 <div class="icon">🏛️</div>
                 <h3>Join themed parties and<br>unique educational workshops.</h3>
                 <p>We offer unforgettable experiences that foster community and learning.</p>
-                <div class="link-wrapper"><a href="#contact">Join →</a></div>
             </div>
 
             <!-- Card 2 -->
@@ -120,7 +141,6 @@
                 <div class="icon">🪙</div>
                 <h3>Attend educational talks<br>on well-being and culture.</h3>
                 <p>Learn from experts in a friendly and welcoming environment.</p>
-                <div class="link-wrapper"><a href="#contact">Sign up →</a></div>
             </div>
 
             <!-- Card 3 -->
@@ -128,12 +148,19 @@
                 <div class="icon">🔗</div>
                 <h3>Enjoy practical workshops<br>that enrich your knowledge.</h3>
                 <p>Develop new skills while having fun with other members.</p>
-                <div class="link-wrapper"><a href="#contact">Register →</a></div>
             </div>
 
         </div>
+
+        <!-- Shared Join Button -->
+        <div class="eventos-button-center">
+            <a href="#contact" class="btn-flat-green">Join Us!</a>
+        </div>
+        
     </div>
 </section>
+
+
 
 <section id="event-list" class="event-list-section">
     <div class="event-list-container">
@@ -242,7 +269,7 @@
 
     <!-- SAĞ: Harita -->
     <div class="contact-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4221.92577048605!2d-16.54860952382724!3d28.41524017578404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7ff2ad07819b%3A0x9e2e84fa1ada62b5!2sC.%20de%20Valois%2C%2039%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1752094556896!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4221.92577048605!2d-16.54860952382724!3d28.41524017578404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7ff2ad07819b%3A0x9e2e84fa1ada62b5!2sC.%20de%20Valois%2C%2039%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1752094556896!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
   </div>
