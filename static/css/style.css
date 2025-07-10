@@ -322,6 +322,12 @@ html, body {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .community-buttons {
+    margin-top: 20px; /* 🧼 Görsel ile butonlar arasına boşluk */
+  }
+}
+
 
 /* Butonlar */
 .btn-outline {
