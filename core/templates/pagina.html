@@ -241,7 +241,6 @@
     <!-- IZQUIERDA: Formulario de contacto -->
     <div class="contact-form">
       <h2>Contáctanos</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <form method="POST" action="{% url 'contact_submit' %}">
         {% csrf_token %}
 
@@ -254,9 +253,18 @@
         <label for="message">Mensaje</label>
         <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
 
-        <div class="checkbox-group">
+        <!-- ✅ Profesyonel açıklama + checkbox -->
+        <div class="checkbox-block">
+          <p class="checkbox-info">
+            Respetamos tu privacidad y garantizamos que tus datos personales serán tratados con total confidencialidad. 
+            La información que nos proporciones se utilizará exclusivamente para responder a tu consulta y mejorar la calidad de nuestro servicio. 
+            No compartiremos tus datos con terceros ni los utilizaremos para fines no autorizados. 
+            Al aceptar, confirmas tu conformidad con estas condiciones.
+          </p>
+          <label class="checkbox-label">
             <input type="checkbox" id="terms" required />
-            <label for="terms">Acepto los términos</label>
+            <span>Acepto los Términos y Condiciones</span>
+          </label>
         </div>
 
         <button type="submit">Enviar</button>
@@ -265,30 +273,43 @@
 
     <!-- DERECHA: Mapa -->
     <div class="contact-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4221.92577048605!2d-16.54860952382724!3d28.41524017578404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7ff2ad07819b%3A0x9e2e84fa1ada62b5!2sC.%20de%20Valois%2C%2039%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1752094556896!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4221.92577048605!2d-16.54860952382724!3d28.41524017578404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc6a7ff2ad07819b%3A0x9e2e84fa1ada62b5!2sC.%20de%20Valois%2C%2039%2C%2038400%20Puerto%20de%20la%20Cruz%2C%20Santa%20Cruz%20de%20Tenerife!5e1!3m2!1ses!2ses!4v1752094556896!5m2!1ses!2ses" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
-  <!-- ALT: Newsletter -->
+<!-- ✅ Newsletter modern tek satır düzen -->
 <div class="newsletter">
   <div class="newsletter-text">
-  <h4>Únete a nuestro boletín</h4>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h4>Únete a nuestro boletín</h4>
+    <p>Recibe actualizaciones exclusivas, noticias seleccionadas y ofertas especiales directamente en tu correo electrónico.</p>
   </div>
 
   <form class="newsletter-form" method="POST" action="{% url 'subscribe' %}">
     {% csrf_token %}
-    <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required />
-    
-    <div class="checkbox-group">
-        <input type="checkbox" id="accept_news" required />
-        <label for="accept_news">Acepto los términos</label>
-    </div>
+    <div class="newsletter-row">
+      <!-- Email input -->
+      <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required />
 
-    <button type="submit">Suscribirse</button>
+      <!-- Checkbox + açıklama -->
+      <div class="newsletter-consent">
+        <label>
+          <input type="checkbox" name="accept_news" required>
+          <span>Acepto recibir actualizaciones</span>
+        </label>
+        <small class="newsletter-info">
+          Al suscribirte, aceptas recibir boletines y actualizaciones ocasionales.
+        </small>
+      </div>
+
+      <!-- Buton -->
+      <button type="submit">Suscribirse</button>
+    </div>
   </form>
 </div>
+
 
 <section class="follow-instagram">
   <a href="https://www.instagram.com/aurora420club?igsh=MTV3NXlzbWVvcTVnbA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">

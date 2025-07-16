@@ -11,7 +11,7 @@
 
     <!-- Logo ortada -->
     <div class="hero-logo" data-aos="fade-up">
-        <img src="{% static 'images/1.png' %}" alt="Logo">
+        <img src="{% static 'images/12.png' %}" alt="Logo">
     </div>
 
     <!-- Yazı + Buton -->
@@ -245,7 +245,6 @@
     <!-- SOL: Form Alanı -->
     <div class="contact-form">
       <h2>Contact us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <form method="POST" action="{% url 'contact_submit' %}">
         {% csrf_token %}
 
@@ -258,9 +257,17 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
 
-        <div class="checkbox-group">
-          <input type="checkbox" id="terms" required />
-          <label for="terms">I accept the Terms</label>
+        <div class="checkbox-block">
+            <p class="checkbox-info">
+                We respect your privacy and guarantee that your personal data will be handled with strict confidentiality. 
+                The information you provide will only be used to respond to your request and to improve the quality of our service. 
+                Your data will never be shared with third parties or used for unauthorized purposes. 
+                By accepting, you confirm your agreement with these conditions.
+            </p>
+            <label class="checkbox-label">
+                <input type="checkbox" name="terms" required>
+                <span>I accept the Terms & Conditions</span>
+            </label>
         </div>
 
         <button type="submit">Submit</button>
@@ -275,25 +282,36 @@
   </div>
 </section>
 
-<!-- ✨ Newsletter artık ayrı blok olarak altta -->
 <div class="newsletter">
   <div class="newsletter-text">
     <h4>Join our newsletter</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Get exclusive updates, curated news, and special offers directly in your inbox.</p>
   </div>
 
   <form class="newsletter-form" method="POST" action="{% url 'subscribe' %}">
     {% csrf_token %}
-    <input type="email" name="email" placeholder="Enter your email" required />
+    
+    <div class="newsletter-row">
+      <!-- Email input -->
+      <input type="email" name="email" placeholder="Enter your email" required />
 
-    <div class="checkbox-group">
-      <input type="checkbox" id="accept_news" required />
-      <label for="accept_news">I accept the terms</label>
+      <!-- Checkbox + kısa açıklama -->
+      <div class="newsletter-consent">
+        <label>
+          <input type="checkbox" name="accept_news" required>
+          <span>I agree to receive updates</span>
+        </label>
+        <small class="newsletter-info">
+          By subscribing, you agree to receive occasional curated updates.
+        </small>
+      </div>
+
+      <!-- Buton -->
+      <button type="submit">Subscribe</button>
     </div>
-
-    <button type="submit">Subscribe</button>
   </form>
 </div>
+
 
 <section class="follow-instagram">
   <a href="https://www.instagram.com/aurora420club?igsh=MTV3NXlzbWVvcTVnbA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
