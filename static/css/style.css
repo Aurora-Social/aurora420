@@ -884,6 +884,12 @@ html {
   overflow: hidden;
 }
 
+.contact-map iframe {
+  width: 100% !important;    /* ✅ Tam genişlik */
+  height: 600px !important;  /* ✅ Daha uzun yükseklik */
+  border: 0;
+}
+
 
 .newsletter {
   margin-top: 60px;
@@ -969,14 +975,57 @@ html {
 
 /* Mobil için alta geçsin */
 @media (max-width: 768px) {
-  .newsletter-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .newsletter-row button {
+
+  /* Form genişliğini sınırsız bırak */
+  .newsletter-form {
+    min-width: unset;  /* ✅ min-width 500px sorununu çözer */
     width: 100%;
   }
+
+  /* Satırı tamamen dikey hizala */
+  .newsletter-row {
+    display: flex;
+    flex-direction: column; /* ✅ Daha kontrollü dikey hizalama */
+    align-items: stretch;
+    gap: 12px; /* ✅ Elemanlar arasında boşluk */
+  }
+
+  /* Email input tam genişlik */
+  .newsletter-row input[type="email"] {
+    width: 100%;
+    min-width: unset; /* ✅ Mobilde taşmayı engeller */
+    margin-bottom: 0;
+  }
+
+  /* Checkbox + metin tam genişlik */
+  .newsletter-consent {
+    width: 100%;
+    min-width: unset; /* ✅ Mobilde genişlik zorlamasını kaldır */
+  }
+
+  /* Checkbox metni daha düzgün hizalansın */
+  .newsletter-consent label {
+  display: flex;
+  align-items: center;  /* ✅ Dikey ortalama */
+  gap: 6px;             /* ✅ Aradaki mesafe küçültüldü */
+  font-size: 14px;
+  line-height: 1.4;
 }
+
+
+  /* Açıklama metni input hizasında kalsın */
+  .newsletter-consent .newsletter-info {
+    margin-left: 0; /* ✅ Mobilde checkbox hizasına kayık olmasın */
+  }
+
+  /* Buton tam genişlik ve alta */
+  .newsletter-row button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+
 
 
 
@@ -989,7 +1038,7 @@ html {
   .contact-map {
     min-width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 400px;
   }
 
   .contact-form,
