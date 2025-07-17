@@ -784,6 +784,7 @@ html {
 
 
 
+/* GENEL TASARIM */
 .contact-section {
   background-color: white;
   padding: 80px 20px;
@@ -798,7 +799,6 @@ html {
   align-items: flex-start;
   padding: 0 150px;
 }
-
 
 .contact-form {
   flex: 1;
@@ -851,20 +851,6 @@ html {
   margin-right: 8px;
 }
 
-@media (max-width: 768px) {
-
-  .checkbox-group {
-    flex-wrap: wrap;         /* ✅ Elemanlar taşabiliyor */
-    align-items: flex-start; /* ✅ Hizalamayı düzeltir */
-    gap: 10px;               /* ✅ Daha ferah görünüm */
-  }
-
-  .checkbox-group label {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-}
-
 .contact-form button {
   background-color: black;
   color: white;
@@ -875,8 +861,9 @@ html {
   cursor: pointer;
 }
 
+/* HARİTA */
 .contact-map {
-  flex: 1.3; /* ✨ Daha fazla yer kaplar */
+  flex: 1.3;
   min-width: 400px;
   max-width: 600px;
   min-height: 400px;
@@ -885,12 +872,12 @@ html {
 }
 
 .contact-map iframe {
-  width: 100% !important;    /* ✅ Tam genişlik */
-  height: 600px !important;  /* ✅ Daha uzun yükseklik */
+  width: 100% !important;
+  height: 600px !important;
   border: 0;
 }
 
-
+/* NEWSLETTER GENEL */
 .newsletter {
   margin-top: 60px;
   display: flex;
@@ -915,10 +902,8 @@ html {
   color: #555;
 }
 
-/* Newsletter satır düzeni */
 .newsletter-form {
   flex: 2;
-  min-width: 500px;
 }
 
 .newsletter-row {
@@ -973,96 +958,24 @@ html {
   min-width: 120px;
 }
 
-/* Mobil için alta geçsin */
+/* ✅ TEK BİR DÜZENLİ MOBİL BLOĞU */
 @media (max-width: 768px) {
 
-  /* Form genişliğini sınırsız bırak */
-  .newsletter-form {
-    min-width: unset;  /* ✅ min-width 500px sorununu çözer */
-    width: 100%;
-  }
-
-  /* Satırı tamamen dikey hizala */
-  .newsletter-row {
-    display: flex;
-    flex-direction: column; /* ✅ Daha kontrollü dikey hizalama */
-    align-items: stretch;
-    gap: 12px; /* ✅ Elemanlar arasında boşluk */
-  }
-
-  /* Email input tam genişlik */
-  .newsletter-row input[type="email"] {
-    width: 100%;
-    min-width: unset; /* ✅ Mobilde taşmayı engeller */
-    margin-bottom: 0;
-  }
-
-  /* Checkbox + metin tam genişlik */
-  .newsletter-consent {
-    width: 100%;
-    min-width: unset; /* ✅ Mobilde genişlik zorlamasını kaldır */
-  }
-
-  /* Checkbox metni daha düzgün hizalansın */
-  .newsletter-consent label {
-  display: flex;
-  align-items: center;  /* ✅ Dikey ortalama */
-  gap: 6px;             /* ✅ Aradaki mesafe küçültüldü */
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-
-  /* Açıklama metni input hizasında kalsın */
-  .newsletter-consent .newsletter-info {
-    margin-left: 0; /* ✅ Mobilde checkbox hizasına kayık olmasın */
-  }
-
-  /* Buton tam genişlik ve alta */
-  .newsletter-row button {
-    width: 100%;
-    margin-top: 5px;
-  }
-}
-
-
-
-
-
-@media (max-width: 768px) {
+  /* Container’lar daha dar padding alır */
   .contact-container,
   .newsletter {
-    padding: 0 20px; /* Mobil uyumlu padding */
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 20px;
   }
 
+  /* Contact map mobilde tam genişlik */
   .contact-map {
     min-width: 100%;
     max-width: 100%;
     height: 400px;
-  }
-
-  .contact-form,
-  .newsletter-text,
-  .newsletter-form {
-    width: 100%;
-  }
-
-  .newsletter-form {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .newsletter-form input,
-  .newsletter-form button {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-map {
     display: flex;
     justify-content: center;
-    width: 100%;
   }
 
   .contact-map iframe {
@@ -1070,7 +983,78 @@ html {
     height: auto;
     max-width: 100%;
   }
+
+  /* Checkbox grup mobil uyumlu */
+  .checkbox-group {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .checkbox-group label {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* Newsletter mobil düzen */
+  .newsletter {
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .newsletter-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .newsletter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .newsletter-row input[type="email"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: auto;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .newsletter-consent {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+
+  .newsletter-consent label {
+    flex-wrap: wrap;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .newsletter-consent .newsletter-info {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+  }
+
+  .newsletter-row button {
+    width: 100%;
+    padding: 12px;
+  }
 }
+
 
 .checkbox-block {
   margin: 20px 0;
