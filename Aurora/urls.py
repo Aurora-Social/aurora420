@@ -27,8 +27,11 @@ def index(request):
 def pagina(request):
     return render(request, 'pagina.html')
 
+def coming_soon(request):
+    return render(request, 'coming_soon.html')
+
 urlpatterns = [
-    path('', pagina),
+    path('', coming_soon, name="coming_soon"),
     path('pagina/', pagina),
     path('en/', index),
     path('en/index', index),

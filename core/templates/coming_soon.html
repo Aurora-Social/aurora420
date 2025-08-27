@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Próximamente / Coming Soon</title>
+  <style>
+    :root{ --accent:#7ea1ff; }
+    html,body{ height:100%; margin:0; background:#0a0f1a; color:#eaf0ff; font-family:Arial, sans-serif; }
+    .wrap{ min-height:100%; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden; padding:20px; }
+    .bg{ position:absolute; inset:0;
+         background: url("{% static 'images/tepe.png' %}") center/cover no-repeat;
+         opacity:.30; filter:saturate(105%) contrast(102%); }
+    .overlay{ position:absolute; inset:0; background:rgba(10,15,26,.66); }
+    .card{ position:relative; z-index:1; max-width:720px; padding:28px 20px; }
+    .chip{ display:inline-block; padding:10px 14px; border-radius:999px;
+           border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.06); font-size:1rem; }
+    .chip small{ display:block; font-size:.85rem; opacity:.8; }
+    h1{ font-size:clamp(28px,5vw,44px); margin:14px 0 8px; }
+    h1 small{ display:block; font-size:clamp(18px,3.5vw,26px); opacity:.8; margin-top:6px; }
+    p{ opacity:.92; margin:12px auto 20px; max-width:620px; font-size:1.1rem; }
+    p small{ display:block; font-size:.95rem; opacity:.8; margin-top:8px; }
+    .cta{ display:inline-block; margin-top:14px; padding:12px 20px; border-radius:10px;
+          background:var(--accent); color:#0a0f1a; font-weight:700; text-decoration:none; font-size:1.05rem; }
+    .cta small{ display:block; font-size:.85rem; font-weight:500; opacity:.8; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="card">
+      <span class="chip">
+        🚧 Sitio en construcción
+        <small>Website under construction</small>
+      </span>
+
+      <h1>
+        Próximamente
+        <small>Coming Soon</small>
+      </h1>
+
+      <p>
+        Estamos trabajando en un nuevo diseño y un mejor rendimiento. ¡Mantente al tanto!
+        <small>We're working on a new design and improved performance. Stay tuned!</small>
+      </p>
+
+      <a class="cta" href="mailto:info@aurora420.org">
+        Contáctanos
+        <small>Contact Us</small>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
