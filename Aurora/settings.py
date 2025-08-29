@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-baxkxeoakow73zx&omb3uh!_r)r3h!lr7ep349l4@)f!)cp%%l
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['aurora420.onrender.com', 'www.aurora420.org', 'aurora420.org',]
+ALLOWED_HOSTS = ['aurora420-71p0.onrender.com', 'aurora420.onrender.com', 'www.aurora420.org', 'aurora420.org',]
 
 
 # Application definition

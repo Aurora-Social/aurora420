@@ -1,1 +1,1 @@
-web: gunicorn Aurora.wsgi
+web: gunicorn Aurora.wsgi:application
