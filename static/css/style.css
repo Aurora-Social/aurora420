@@ -1399,3 +1399,13 @@ html {
 
 
 
+/* Coming Soon görünümü */
+.event-date .coming-soon {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;        /* koyu metin */
+  line-height: 1.2;
+  padding: 6px 0;
+}
