@@ -162,77 +162,78 @@
 
 
 <section id="event-list" class="event-list-section">
-    <div class="event-list-container">
-        <h2 class="event-list-title" data-aos="fade-up">Events</h2>
+  <div class="event-list-container">
+    <h2 class="event-list-title" data-aos="fade-up">Events</h2>
 
-        <!-- Event 1: Football Match -->
-        <div class="event-item" data-aos="fade-right">
-            <div class="event-date">
-                <span class="day">Fri</span>
-                <span class="number">12</span>
-                <span class="month">Jul 2024</span>
-                <span class="time">20:00</span>
-            </div>
-            <div class="event-info">
-                <h3>Football Match on Big Screen</h3>
-                <p>Enjoy the game with fellow members in a relaxed and social atmosphere.</p>
-            </div>
-        </div>
-
-        <!-- Event 2: Card Games -->
-        <div class="event-item" data-aos="fade-right">
-            <div class="event-date">
-                <span class="day">Sat</span>
-                <span class="number">13</span>
-                <span class="month">Jul 2024</span>
-                <span class="time">18:00</span>
-            </div>
-            <div class="event-info">
-                <h3>Card Game Night</h3>
-                <p>Join us for a fun evening with classics like Uno, Poker and more.</p>
-            </div>
-        </div>
-
-        <!-- Event 3: Board Games -->
-        <div class="event-item" data-aos="fade-right">
-            <div class="event-date">
-                <span class="day">Sun</span>
-                <span class="number">14</span>
-                <span class="month">Jul 2024</span>
-                <span class="time">17:00</span>
-            </div>
-            <div class="event-info">
-                <h3>Board Game Session</h3>
-                <p>Discover new games or enjoy old favorites with other members in the lounge.</p>
-            </div>
-        </div>
+    <!-- Event 1: Football Match -->
+    <div class="event-item" data-aos="fade-right">
+      <div class="event-date">
+        <span class="coming-soon">Coming Soon</span>
+      </div>
+      <div class="event-info">
+        <h3>Football Match on Big Screen</h3>
+        <p>Enjoy the game with fellow members in a relaxed and social atmosphere.</p>
+      </div>
     </div>
+
+    <!-- Event 2: Card Games -->
+    <div class="event-item" data-aos="fade-right">
+      <div class="event-date">
+        <span class="coming-soon">Coming Soon</span>
+      </div>
+      <div class="event-info">
+        <h3>Card Game Night</h3>
+        <p>Join us for a fun evening with classics like Uno, Poker and more.</p>
+      </div>
+    </div>
+
+    <!-- Event 3: Board Games -->
+    <div class="event-item" data-aos="fade-right">
+      <div class="event-date">
+        <span class="coming-soon">Coming Soon</span>
+      </div>
+      <div class="event-info">
+        <h3>Board Game Session</h3>
+        <p>Discover new games or enjoy old favorites with other members in the lounge.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 
+
 <section id="gallery" class="gallery-section">
-  <h2>Gallery</h2>
+  <h2>Galery</h2>
   <div class="gallery-grid">
 
-    <!-- ✅ Eski static resimler -->
-    <img src="{% static 'images/header.jpg' %}" alt="Gallery Image 1" onclick="openModal(this)">
-    <img src="{% static 'images/draw.png' %}" alt="Gallery Image 2" onclick="openModal(this)">
-    <img src="{% static 'images/sarki.png' %}" alt="Gallery Image 3" onclick="openModal(this)">
-    <img src="{% static 'images/talking.png' %}" alt="Gallery Image 4" onclick="openModal(this)">
-    <img src="{% static 'images/weed.png' %}" alt="Gallery Image 5" onclick="openModal(this)">
-    <img src="{% static 'images/movie.png' %}" alt="Gallery Image 6" onclick="openModal(this)">
+    <!-- ✅ Resimler de siempre (static) -->
+    <img src="{% static 'images/aurora1.jpg' %}" alt="Imagen 1" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora2.png' %}" alt="Imagen 2" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora3.png' %}" alt="Imagen 3" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora4.png' %}" alt="Imagen 4" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora5.png' %}" alt="Imagen 5" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora6.png' %}" alt="Imagen 6" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora7.jpg' %}" alt="Imagen 7" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora8.png' %}" alt="Imagen 8" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora9.png' %}" alt="Imagen 9" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora10.png' %}" alt="Imagen 10" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora11.png' %}" alt="Imagen 11" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora12.png' %}" alt="Imagen 12" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora13.jpg' %}" alt="Imagen 13" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora14.png' %}" alt="Imagen 14" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/aurora15.png' %}" alt="Imagen 15" onclick="openModal(this)" loading="lazy" />
 
-    <!-- ✅ Admin panelden gelen yeni görseller -->
+    <!-- ✅ Desde admin panel (dinámico) -->
     {% for image in gallery_images %}
-      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)">
+      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)" loading="lazy" />
     {% endfor %}
 
   </div>
 
   <!-- Modal -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
+  <div id="imageModal" class="modal" aria-hidden="true">
+    <span class="close" role="button" aria-label="Close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="" />
   </div>
 </section>
 
@@ -319,6 +320,30 @@
   </a>
 </section>
 
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = modal.querySelector('.close');
+
+  // Dış kısma tıklayınca kapat
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      closeModal();
+    }
+  });
+
+  // Görsele tıklayınca kapanmasın
+  modalImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // ESC ile kapatma
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+</script>
 
 
 {% endblock content %}

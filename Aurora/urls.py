@@ -31,7 +31,7 @@ def coming_soon(request):
     return render(request, 'coming_soon.html')
 
 urlpatterns = [
-    path('', coming_soon, name="coming_soon"),
+    path('', pagina),
     path('pagina/', pagina),
     path('en/', index),
     path('en/index', index),
