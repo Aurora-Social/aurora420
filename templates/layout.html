@@ -135,16 +135,44 @@
 </script>
 
 <script>
-  function openModal(imgElement) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imgElement.src;
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = modal.querySelector('.close');
+
+  function openModal(imgEl) {
+    modalImg.src = imgEl.src;
+    modalImg.alt = imgEl.alt || '';
+    modal.style.display = 'block';
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden'; // sayfa arkası scroll kapat
   }
 
   function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
+    modal.style.display = 'none';
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = ''; // geri aç
+    modalImg.src = '';
+    modalImg.alt = '';
   }
+
+  // Dış kısma tıklayınca kapat
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      closeModal();
+    }
+  });
+
+  // Görselin kendisine tıklayınca kapanmasın
+  modalImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // ESC ile kapat
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
 </script>
 
 <script>
