@@ -106,13 +106,16 @@
         <a href="https://www.instagram.com/aurora420club" class="icon-instagram" target="_blank" title="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="mailto:info@aurora420.org?subject=Visité%20su%20sitio%20web&body=..." class="icon-email" title="Correo electrónico">
+        <a href="mailto:info@aurora420.org?subject=Consulta%20desde%20la%20web%20Aurora420&body=Hola%20Aurora420%2C%0A%0AHe%20visitado%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%0A%0A%C2%A1Gracias!"
+          class="icon-email" title="Correo electrónico">
           <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://wa.me/34622867665?text=..." class="icon-whatsapp" target="_blank" title="WhatsApp">
+        <a href="https://wa.me/34622867665?text=Hola%20Aurora420%2C%20he%20visitado%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%A1Gracias!"
+          class="icon-whatsapp" target="_blank" title="WhatsApp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </div>
+
 
       <!-- CAMBIO DE IDIOMA: Justo debajo de los iconos -->
       <div class="footer-language">
@@ -136,17 +139,107 @@
 </script>
 
 <script>
-  function openModal(imgElement) {
+  (function () {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
-    modal.style.display = "block";
-    modalImg.src = imgElement.src;
-  }
+    const closeBtn = modal.querySelector(".close");
+    const prevBtn = modal.querySelector(".nav-arrow.prev");
+    const nextBtn = modal.querySelector(".nav-arrow.next");
+    const counter = document.getElementById("modalCounter");
 
-  function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
-  }
+    const images = Array.from(document.querySelectorAll(".gallery-grid img"));
+    let currentIndex = 0;
+
+    // Body scroll kilidi
+    const lockScroll = () => document.body.style.overflow = "hidden";
+    const unlockScroll = () => document.body.style.overflow = "";
+
+    function showImage(index) {
+      if (images.length === 0) return;
+      // wrap (sonsuz döngü)
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      currentIndex = index;
+
+      const src = images[currentIndex].getAttribute("src");
+      const alt = images[currentIndex].getAttribute("alt") || "Gallery image";
+      modalImg.src = src;
+      modalImg.alt = alt;
+      if (counter) counter.textContent = `${currentIndex + 1} / ${images.length}`;
+    }
+
+    // Dışarıdan çağırmak için
+    window.openModalAt = function (imgEl) {
+      const idx = images.indexOf(imgEl);
+      if (idx === -1) return;
+      modal.style.display = "block";
+      modal.setAttribute("aria-hidden", "false");
+      lockScroll();
+      showImage(idx);
+    };
+
+    function closeModal() {
+      modal.style.display = "none";
+      modal.setAttribute("aria-hidden", "true");
+      unlockScroll();
+    }
+
+    function showNext() { showImage(currentIndex + 1); }
+    function showPrev() { showImage(currentIndex - 1); }
+
+    // Ok butonları
+    nextBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      showNext();
+    });
+
+    prevBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      showPrev();
+    });
+
+    // Kapat (X)
+    closeBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      closeModal();
+    });
+
+    // Arka plana tıklayınca kapat (resmin dışı)
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Klavye: Esc, ←, →
+    document.addEventListener("keydown", function (e) {
+      if (modal.style.display === "block") {
+        if (e.key === "Escape") closeModal();
+        else if (e.key === "ArrowRight") showNext();
+        else if (e.key === "ArrowLeft") showPrev();
+      }
+    });
+
+    // Mobil swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    modal.addEventListener("touchstart", function (e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    modal.addEventListener("touchend", function (e) {
+      touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      // küçük titremeleri filtrele
+      if (Math.abs(dx) > 40) {
+        if (dx < 0) showNext();
+        else showPrev();
+      }
+    });
+  })();
 </script>
+
 
 <script>
   function toggleMenu() {
