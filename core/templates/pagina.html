@@ -159,42 +159,51 @@
 
 
 <section id="event-list" class="event-list-section">
-  <div class="event-list-container">
-    <h2 class="event-list-title" data-aos="fade-up">Eventos</h2>
+    <div class="event-list-container">
+        <h2 class="event-list-title" data-aos="fade-up">Eventos</h2>
 
-    <!-- Evento 1: Partido de fútbol -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
-      </div>
-      <div class="event-info">
-        <h3>Partido de fútbol en pantalla grande</h3>
-        <p>Disfruta el partido con otros miembros en un ambiente relajado y social.</p>
-      </div>
-    </div>
+        <!-- Evento 1: Partido de fútbol -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Vie</span>
+                <span class="number">12</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">20:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Partido de fútbol en pantalla grande</h3>
+                <p>Disfruta el partido con otros miembros en un ambiente relajado y social.</p>
+            </div>
+        </div>
 
-    <!-- Evento 2: Juegos de cartas -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
-      </div>
-      <div class="event-info">
-        <h3>Noche de juegos de cartas</h3>
-        <p>Ven a compartir una velada divertida con clásicos como Uno, Poker y más.</p>
-      </div>
-    </div>
+        <!-- Evento 2: Juegos de cartas -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Sab</span>
+                <span class="number">13</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">18:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Noche de juegos de cartas</h3>
+                <p>Ven a compartir una velada divertida con clásicos como Uno, Poker y más.</p>
+            </div>
+        </div>
 
-    <!-- Evento 3: Juegos de mesa -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
-      </div>
-      <div class="event-info">
-        <h3>Sesión de juegos de mesa</h3>
-        <p>Descubre nuevos juegos o revive tus favoritos con otros socios en el lounge.</p>
-      </div>
+        <!-- Evento 3: Juegos de mesa -->
+        <div class="event-item" data-aos="fade-right">
+            <div class="event-date">
+                <span class="day">Dom</span>
+                <span class="number">14</span>
+                <span class="month">Jul 2024</span>
+                <span class="time">17:00</span>
+            </div>
+            <div class="event-info">
+                <h3>Sesión de juegos de mesa</h3>
+                <p>Descubre nuevos juegos o revive tus favoritos con otros socios en el lounge.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 
@@ -203,21 +212,12 @@
   <div class="gallery-grid">
 
     <!-- ✅ Resimler de siempre (static) -->
-    <img src="{% static 'images/aurora1.jpg' %}" alt="Imagen 1" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora2.jpg' %}" alt="Imagen 2" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora3.jpg' %}" alt="Imagen 3" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora4.jpg' %}" alt="Imagen 4" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora5.jpg' %}" alt="Imagen 5" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora6.jpg' %}" alt="Imagen 6" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora7.jpg' %}" alt="Imagen 7" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora8.jpg' %}" alt="Imagen 8" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora9.jpg' %}" alt="Imagen 9" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora10.jpg' %}" alt="Imagen 10" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora11.jpg' %}" alt="Imagen 11" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora12.jpg' %}" alt="Imagen 12" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora13.jpg' %}" alt="Imagen 13" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora14.jpg' %}" alt="Imagen 14" onclick="openModal(this)" loading="lazy" />
-    <img src="{% static 'images/aurora15.jpg' %}" alt="Imagen 15" onclick="openModal(this)" loading="lazy" />
+    <img src="{% static 'images/header.jpg' %}" alt="Imagen 1" onclick="openModal(this)">
+    <img src="{% static 'images/draw.png' %}" alt="Imagen 2" onclick="openModal(this)">
+    <img src="{% static 'images/sarki.png' %}" alt="Imagen 3" onclick="openModal(this)">
+    <img src="{% static 'images/talking.png' %}" alt="Imagen 4" onclick="openModal(this)">
+    <img src="{% static 'images/weed.png' %}" alt="Imagen 5" onclick="openModal(this)">
+    <img src="{% static 'images/movie.png' %}" alt="Imagen 6" onclick="openModal(this)">
 
     <!-- ✅ Desde admin panel (dinámico) -->
     {% for image in gallery_images %}
@@ -317,31 +317,6 @@
   </a>
 </section>
 
-
-<script>
-  const modal = document.getElementById('imageModal');
-  const modalImg = document.getElementById('modalImg');
-  const closeBtn = modal.querySelector('.close');
-
-  // Dış kısma tıklayınca kapat
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal || e.target === closeBtn) {
-      closeModal();
-    }
-  });
-
-  // Görsele tıklayınca kapanmasın
-  modalImg.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
-
-  // ESC ile kapatma
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-      closeModal();
-    }
-  });
-</script>
 
 
 {% endblock content %}
