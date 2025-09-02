@@ -221,15 +221,15 @@
 
     <!-- ✅ Desde admin panel (dinámico) -->
     {% for image in gallery_images %}
-      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)" loading="lazy" />
+      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)">
     {% endfor %}
 
   </div>
 
   <!-- Modal -->
-  <div id="imageModal" class="modal" aria-hidden="true">
-    <span class="close" role="button" aria-label="Close">&times;</span>
-    <img class="modal-content" id="modalImg" alt="" />
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
   </div>
 </section>
 
@@ -317,6 +317,31 @@
   </a>
 </section>
 
+
+<script>
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = modal.querySelector('.close');
+
+  // Dış kısma tıklayınca kapat
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal || e.target === closeBtn) {
+      closeModal();
+    }
+  });
+
+  // Görsele tıklayınca kapanmasın
+  modalImg.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  // ESC ile kapatma
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.style.display === 'block') {
+      closeModal();
+    }
+  });
+</script>
 
 
 {% endblock content %}

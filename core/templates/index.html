@@ -203,10 +203,9 @@
 
 
 <section id="gallery" class="gallery-section">
-  <h2>Galery</h2>
+  <h2>Gallery</h2>
   <div class="gallery-grid">
 
-    <!-- ✅ Resimler de siempre (static) -->
     <img src="{% static 'images/aurora1.jpg' %}" alt="Imagen 1" onclick="openModal(this)" loading="lazy" />
     <img src="{% static 'images/aurora2.png' %}" alt="Imagen 2" onclick="openModal(this)" loading="lazy" />
     <img src="{% static 'images/aurora3.png' %}" alt="Imagen 3" onclick="openModal(this)" loading="lazy" />
@@ -223,17 +222,17 @@
     <img src="{% static 'images/aurora14.png' %}" alt="Imagen 14" onclick="openModal(this)" loading="lazy" />
     <img src="{% static 'images/aurora15.png' %}" alt="Imagen 15" onclick="openModal(this)" loading="lazy" />
 
-    <!-- ✅ Desde admin panel (dinámico) -->
+    <!-- ✅ Admin panelden gelen yeni görseller -->
     {% for image in gallery_images %}
-      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)" loading="lazy" />
+      <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModal(this)">
     {% endfor %}
 
   </div>
 
   <!-- Modal -->
-  <div id="imageModal" class="modal" aria-hidden="true">
-    <span class="close" role="button" aria-label="Close">&times;</span>
-    <img class="modal-content" id="modalImg" alt="" />
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
   </div>
 </section>
 
