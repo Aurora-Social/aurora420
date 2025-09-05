@@ -205,21 +205,16 @@
 <section id="gallery" class="gallery-section">
   <h2>Gallery</h2>
   <div class="gallery-grid">
-    <img src="{% static 'images/aurora1.jpg' %}" alt="Imagen 1" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora2.jpg' %}" alt="Imagen 2" onclick="openModalAt(this)">
-    <img src="{% static 'images/aurora3.jpg' %}" alt="Imagen 3" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora4.jpg' %}" alt="Imagen 4" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora5.jpg' %}" alt="Imagen 5" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora6.jpg' %}" alt="Imagen 6" onclick="openModalAt(this)">
-    <img src="{% static 'images/aurora7.jpg' %}" alt="Imagen 7" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora8.jpg' %}" alt="Imagen 8" onclick="openModalAt(this)">
-    <img src="{% static 'images/aurora9.jpg' %}" alt="Imagen 9" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora10.jpg' %}" alt="Imagen 10" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora11.jpg' %}" alt="Imagen 11" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora12.jpg' %}" alt="Imagen 12" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora13.jpg' %}" alt="Imagen 13" onclick="openModalAt(this)">
     <img src="{% static 'images/aurora14.jpg' %}" alt="Imagen 14" onclick="openModalAt(this)">
-    <img src="{% static 'images/aurora15.jpg' %}" alt="Imagen 15" onclick="openModalAt(this)">
 
     {% for image in gallery_images %}
       <img src="{{ image.image.url }}" alt="{{ image.title }}" onclick="openModalAt(this)">
