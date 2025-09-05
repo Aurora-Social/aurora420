@@ -18,10 +18,10 @@ class ContactMessage(models.Model):
         return f"{self.name} - {self.email}"
 
 
-
 class GalleryImage(models.Model):
     image = models.ImageField(upload_to='gallery/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return f"Gallery image uploaded at {self.uploaded_at}"
+
