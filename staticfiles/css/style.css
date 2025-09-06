@@ -1477,7 +1477,7 @@ html {
 }
 
 
-/* === FOOTBALL CALENDAR (ENGLISH CLEAN VERSION) === */
+/* === FOOTBALL CALENDAR (CLEAN, LEFT-ALIGNED LEAGUE LOGOS) === */
 .football-calendar {
   background: #ffffff;
   padding: 60px 20px;
@@ -1512,7 +1512,7 @@ html {
   justify-content: space-between;
   background: #f9f9f9;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 15px 30px;
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: all 0.2s ease-in-out;
@@ -1522,57 +1522,30 @@ html {
   background: #f0f0f0;
 }
 
-.match-date {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #0e1a2b;
-  color: white;
-  padding: 10px;
-  border-radius: 8px;
-  min-width: 70px;
-  order: 3; /* Sağ tarafa (3. sıraya) taşı */
-}
-
-.match-date .day {
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.match-date .number {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 4px 0;
-}
-
-.match-date .time {
-  font-size: 12px;
-  color: #C1FF72;
-}
-
-.match-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex: 1;
-  flex-wrap: wrap;
-  order: 2; /* Orta kısım (2. sıra) */
-}
-
-/* Lig logoları büyük kalsın */
 .match-competition {
-  order: 1; /* Sol tarafa (1. sıraya) taşı */
-  flex-shrink: 0;
+  order: 1;
+  min-width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .match-competition img {
-  height: 50px; /* Lig logoları büyük olsun */
+  height: 50px;
   width: auto;
   max-width: 60px;
   object-fit: contain;
   display: block;
+}
+
+.match-info {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .match-teams {
@@ -1581,7 +1554,7 @@ html {
   gap: 15px;
   flex-wrap: wrap;
   flex: 1;
-  justify-content: center; /* Maç bilgilerini ortala */
+  justify-content: center;
 }
 
 .team {
@@ -1613,6 +1586,35 @@ html {
   color: #555;
 }
 
+.match-date {
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0e1a2b;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 70px;
+}
+
+.match-date .day {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.match-date .number {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.match-date .time {
+  font-size: 12px;
+  color: #C1FF72;
+}
+
 /* === MOBILE FRIENDLY === */
 @media (max-width: 768px) {
   .match-item {
@@ -1621,11 +1623,26 @@ html {
     gap: 15px;
   }
 
+  .match-competition {
+    order: 1;
+    align-self: center;
+  }
+
   .match-info {
+    order: 2;
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     gap: 15px;
+  }
+
+  .match-teams {
+    justify-content: flex-start;
+  }
+
+  .match-date {
+    order: 3;
+    align-self: center;
   }
 
   .calendar-title {
@@ -1639,20 +1656,5 @@ html {
   .team img {
     height: 20px;
     width: auto;
-  }
-
-  .match-date {
-    align-self: center;
-    order: 3;
-  }
-  
-  .match-competition {
-    order: 1;
-    align-self: center;
-  }
-  
-  .match-teams {
-    order: 2;
-    justify-content: flex-start;
   }
 }
