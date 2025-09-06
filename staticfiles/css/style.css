@@ -1559,13 +1559,22 @@ html {
   flex-wrap: wrap;
 }
 
-.match-competition img {
-  height: auto;
-  max-height: 30px;
-  max-width: 80px;
+.match-competition img,
+.team img {
+  height: 24px;
   width: auto;
+  max-width: 40px;
   object-fit: contain;
+  display: block;
 }
+
+.team,
+.match-competition {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 
 
 .match-teams {
