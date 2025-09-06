@@ -1516,7 +1516,6 @@ html {
   margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: all 0.2s ease-in-out;
-  gap: 20px;
 }
 
 .match-item:hover {
@@ -1532,7 +1531,7 @@ html {
   padding: 10px;
   border-radius: 8px;
   min-width: 70px;
-  flex-shrink: 0;
+  order: 3; /* Sağ tarafa (3. sıraya) taşı */
 }
 
 .match-date .day {
@@ -1552,8 +1551,19 @@ html {
   color: #C1FF72;
 }
 
+.match-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1;
+  flex-wrap: wrap;
+  order: 2; /* Orta kısım (2. sıra) */
+}
+
 /* Lig logoları büyük kalsın */
 .match-competition {
+  order: 1; /* Sol tarafa (1. sıraya) taşı */
   flex-shrink: 0;
 }
 
@@ -1607,9 +1617,15 @@ html {
 @media (max-width: 768px) {
   .match-item {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
-    text-align: center;
+  }
+
+  .match-info {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 15px;
   }
 
   .calendar-title {
@@ -1622,14 +1638,21 @@ html {
 
   .team img {
     height: 20px;
+    width: auto;
   }
 
-  .match-teams {
-    flex-direction: column;
-    gap: 10px;
+  .match-date {
+    align-self: center;
+    order: 3;
   }
   
-  .team {
-    justify-content: center;
+  .match-competition {
+    order: 1;
+    align-self: center;
+  }
+  
+  .match-teams {
+    order: 2;
+    justify-content: flex-start;
   }
 }
