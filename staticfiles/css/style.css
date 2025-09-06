@@ -1559,6 +1559,7 @@ html {
   flex-wrap: wrap;
 }
 
+/* Takım ve lig görselleri için ortak stil */
 .match-competition img,
 .team img {
   height: 24px;
@@ -1567,15 +1568,6 @@ html {
   object-fit: contain;
   display: block;
 }
-
-.team,
-.match-competition {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-
 
 .match-teams {
   display: flex;
@@ -1588,12 +1580,6 @@ html {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.team img {
-  height: 24px;
-  width: 24px;
-  object-fit: contain;
 }
 
 .team span {
@@ -1637,15 +1623,10 @@ html {
 
   .team img {
     height: 20px;
-    width: 20px;
+    width: auto;
   }
 
   .match-date {
     align-self: center;
   }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
