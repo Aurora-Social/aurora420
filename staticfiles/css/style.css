@@ -1477,116 +1477,116 @@ html {
 }
 
 
-/* === FUTBOL CALENDARIO (event-list) === */
+/* === FOOTBALL CALENDAR (ENGLISH CLEAN VERSION) === */
 .football-calendar {
   background: #ffffff;
-  padding: 80px 20px;
+  padding: 60px 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+.calendar-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .calendar-title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   color: #0e1a2b;
   text-transform: uppercase;
 }
 
 .calendar-title span {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   display: block;
-  margin-top: 8px;
-  color: #444;
-}
-
-.calendar-container {
-  max-width: 1000px;
-  margin: 0 auto;
+  margin-top: 6px;
+  color: #666;
 }
 
 .match-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #f3f3f3;
-  border-radius: 15px;
-  padding: 20px 30px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px 20px;
   margin-bottom: 20px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .match-item:hover {
-  background: #ebebeb;
+  background: #f0f0f0;
 }
 
 .match-date {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 70px;
-  padding: 10px;
   background: #0e1a2b;
-  border-radius: 10px;
-  color: #fff;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 70px;
 }
 
 .match-date .day {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 13px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .match-date .number {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .match-date .time {
-  font-size: 13px;
+  font-size: 12px;
   color: #C1FF72;
-  font-weight: 500;
 }
 
 .match-info {
   display: flex;
   align-items: center;
-  gap: 30px;
-  flex: 1;
   justify-content: space-between;
+  gap: 20px;
+  flex: 1;
   flex-wrap: wrap;
 }
 
 .match-competition img {
-  height: 36px;
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+  height: 30px;
+  object-fit: contain;
 }
 
 .match-teams {
   display: flex;
   align-items: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .team {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .team img {
-  height: 28px;
-  width: 28px;
+  height: 24px;
+  width: 24px;
   object-fit: contain;
 }
 
 .team span {
+  font-size: 14px;
   font-weight: 500;
   color: #222;
-  font-size: 16px;
 }
 
 .team span.bold {
@@ -1594,36 +1594,37 @@ html {
 }
 
 .vs {
+  font-size: 14px;
   font-weight: bold;
-  font-size: 16px;
   color: #555;
 }
 
-/* === MOBİL UYUMLU === */
+/* === MOBILE FRIENDLY === */
 @media (max-width: 768px) {
   .match-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: 15px;
   }
 
   .match-info {
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    width: 100%;
+    gap: 15px;
   }
 
   .calendar-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .match-competition img {
-    height: 32px;
+    height: 28px;
   }
 
   .team img {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
   }
 
   .match-date {
