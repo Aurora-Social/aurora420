@@ -1560,9 +1560,13 @@ html {
 }
 
 .match-competition img {
-  height: 30px;
+  height: auto;
+  max-height: 30px;
+  max-width: 80px;
+  width: auto;
   object-fit: contain;
 }
+
 
 .match-teams {
   display: flex;
@@ -1630,4 +1634,9 @@ html {
   .match-date {
     align-self: center;
   }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
