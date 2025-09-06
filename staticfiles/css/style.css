@@ -1477,52 +1477,42 @@ html {
 }
 
 
-/* === FOOTBALL CALENDAR (ENGLISH CLEAN VERSION) === */
-.football-calendar {
-  background: #ffffff;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.calendar-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.calendar-title {
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #0e1a2b;
-  text-transform: uppercase;
-}
-
-.calendar-title span {
-  font-size: 18px;
-  font-weight: 400;
-  display: block;
-  margin-top: 6px;
-  color: #666;
-}
-
 .match-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #f9f9f9;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  gap: 30px;
 }
 
-.match-item:hover {
-  background: #f0f0f0;
+.match-competition {
+  flex: 0 0 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.match-competition img {
+  height: 40px;
+  max-width: 70px;
+  object-fit: contain;
+}
+
+.match-teams {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .match-date {
+  flex: 0 0 70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1550,42 +1540,20 @@ html {
   color: #C1FF72;
 }
 
-.match-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex: 1;
-  flex-wrap: wrap;
-}
-
-/* Takım ve lig görselleri için ortak stil */
-.match-competition img,
-.team img {
-  height: 24px;
-  width: auto;
-  max-width: 40px;
-  object-fit: contain;
-  display: block;
-}
-
-.match-teams {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
 .team {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+}
+
+.team img {
+  height: 24px;
+  max-width: 24px;
 }
 
 .team span {
   font-size: 14px;
   font-weight: 500;
-  color: #222;
 }
 
 .team span.bold {
@@ -1598,35 +1566,30 @@ html {
   color: #555;
 }
 
-/* === MOBILE FRIENDLY === */
+
 @media (max-width: 768px) {
   .match-item {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
 
-  .match-info {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    gap: 15px;
-  }
-
-  .calendar-title {
-    font-size: 24px;
+  .match-competition,
+  .match-teams,
+  .match-date {
+    flex: none;
   }
 
   .match-competition img {
-    height: 28px;
+    height: 32px;
   }
 
   .team img {
     height: 20px;
-    width: auto;
   }
 
   .match-date {
-    align-self: center;
+    min-width: auto;
   }
 }
