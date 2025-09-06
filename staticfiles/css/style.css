@@ -1475,3 +1475,158 @@ html {
 @media (max-width: 768px) {
   .nav-arrow { font-size: 28px; width: 48px; height: 48px; }
 }
+
+
+/* === FUTBOL CALENDARIO (event-list) === */
+.football-calendar {
+  background: #ffffff;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.calendar-title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #0e1a2b;
+  text-transform: uppercase;
+}
+
+.calendar-title span {
+  font-size: 20px;
+  font-weight: 400;
+  display: block;
+  margin-top: 8px;
+  color: #444;
+}
+
+.calendar-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.match-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f3f3f3;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+}
+
+.match-item:hover {
+  background: #ebebeb;
+}
+
+.match-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 70px;
+  padding: 10px;
+  background: #0e1a2b;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.match-date .day {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.match-date .number {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.match-date .time {
+  font-size: 13px;
+  color: #C1FF72;
+  font-weight: 500;
+}
+
+.match-info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.match-competition img {
+  height: 36px;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.2));
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.team img {
+  height: 28px;
+  width: 28px;
+  object-fit: contain;
+}
+
+.team span {
+  font-weight: 500;
+  color: #222;
+  font-size: 16px;
+}
+
+.team span.bold {
+  font-weight: 700;
+}
+
+.vs {
+  font-weight: bold;
+  font-size: 16px;
+  color: #555;
+}
+
+/* === MOBİL UYUMLU === */
+@media (max-width: 768px) {
+  .match-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .match-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .calendar-title {
+    font-size: 26px;
+  }
+
+  .match-competition img {
+    height: 32px;
+  }
+
+  .team img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .match-date {
+    align-self: center;
+  }
+}

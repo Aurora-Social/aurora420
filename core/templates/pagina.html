@@ -158,42 +158,336 @@
 </section>
 
 
-<section id="event-list" class="event-list-section">
-  <div class="event-list-container">
-    <h2 class="event-list-title" data-aos="fade-up">Eventos</h2>
+{% load static %}
+<section id="event-list" class="football-calendar">
+  <div class="calendar-container">
+    <h2 class="calendar-title">Calendario de Partidos de Fútbol<br><span>Septiembre 2025</span></h2>
 
-    <!-- Evento 1: Partido de fútbol -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
+    <!-- Partido 1 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Jue</span>
+        <span class="number">4</span>
+        <span class="time">19:45</span>
       </div>
-      <div class="event-info">
-        <h3>Partido de fútbol en pantalla grande</h3>
-        <p>Disfruta el partido con otros miembros en un ambiente relajado y social.</p>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/fifa.png' %}" alt="Nations League">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/bulgaria.png' %}" alt="Bulgaria">
+            <span>Bulgaria</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/spain.png' %}" alt="España">
+            <span class="bold">España</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Evento 2: Juegos de cartas -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
+    <!-- Partido 2 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Dom</span>
+        <span class="number">7</span>
+        <span class="time">19:45</span>
       </div>
-      <div class="event-info">
-        <h3>Noche de juegos de cartas</h3>
-        <p>Ven a compartir una velada divertida con clásicos como Uno, Poker y más.</p>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/fifa.png' %}" alt="Nations League">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/turkiye.png' %}" alt="Turquía">
+            <span>Turquía</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/spain.png' %}" alt="España">
+            <span class="bold">España</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Evento 3: Juegos de mesa -->
-    <div class="event-item" data-aos="fade-right">
-      <div class="event-date">
-        <span class="coming-soon">Próximamente</span>
+    <!-- Partido 3 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Sáb</span>
+        <span class="number">13</span>
+        <span class="time">15:15</span>
       </div>
-      <div class="event-info">
-        <h3>Sesión de juegos de mesa</h3>
-        <p>Descubre nuevos juegos o revive tus favoritos con otros socios en el lounge.</p>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/realsociedad.png' %}" alt="Real Sociedad">
+            <span>Real Sociedad</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Partido 4 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Dom</span>
+        <span class="number">14</span>
+        <span class="time">20:00</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/barcelona.png' %}" alt="Barcelona">
+            <span>Barcelona</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/valencia.png' %}" alt="Valencia">
+            <span class="bold">Valencia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 5 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Mar</span>
+        <span class="number">16</span>
+        <span class="time">20:00</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/chanpions.png' %}" alt="Champions League">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/marseille.png' %}" alt="Marseille">
+            <span>Marseille</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 6 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Jue</span>
+        <span class="number">18</span>
+        <span class="time">20:00</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/chanpions.png' %}" alt="Champions League">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/newcastle.png' %}" alt="Newcastle">
+            <span>Newcastle UTD</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/barcelona.png' %}" alt="Barcelona">
+            <span class="bold">Barcelona</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 7 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Sáb</span>
+        <span class="number">20</span>
+        <span class="time">15:15</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/espanyol.png' %}" alt="Espanyol">
+            <span>Espanyol</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 8 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Dom</span>
+        <span class="number">21</span>
+        <span class="time">20:00</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/barcelona.png' %}" alt="Barcelona">
+            <span>Barcelona</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/getafe.png' %}" alt="Getafe">
+            <span class="bold">Getafe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 9 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Mar</span>
+        <span class="number">23</span>
+        <span class="time">20:30</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/levante.png' %}" alt="Levante">
+            <span>Levante</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 10 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Jue</span>
+        <span class="number">25</span>
+        <span class="time">20:30</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/realoviedo.png' %}" alt="Real Oviedo">
+            <span>Real Oviedo</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/barcelona.png' %}" alt="Barcelona">
+            <span class="bold">Barcelona</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 11 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Dom</span>
+        <span class="number">28</span>
+        <span class="time">20:00</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/barcelona.png' %}" alt="Barcelona">
+            <span>Barcelona</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/realsociedad.png' %}" alt="Real Sociedad">
+            <span class="bold">Real Sociedad</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 12 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Dom</span>
+        <span class="number">28</span>
+        <span class="time">TBD</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/laliga.png' %}" alt="LaLiga">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/atletico.png' %}" alt="Atlético Madrid">
+            <span>Atlético Madrid</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partido 13 -->
+    <div class="match-item">
+      <div class="match-date">
+        <span class="day">Mar</span>
+        <span class="number">30</span>
+        <span class="time">17:45</span>
+      </div>
+      <div class="match-info">
+        <div class="match-competition">
+          <img src="{% static 'images/chanpions.png' %}" alt="Champions League">
+        </div>
+        <div class="match-teams">
+          <div class="team">
+            <img src="{% static 'images/kairat.png' %}" alt="Kairat Almaty">
+            <span>Kairat Almaty</span>
+          </div>
+          <span class="vs">vs</span>
+          <div class="team">
+            <img src="{% static 'images/realmadrid.png' %}" alt="Real Madrid">
+            <span class="bold">Real Madrid</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
