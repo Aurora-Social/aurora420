@@ -1619,13 +1619,8 @@ html {
 @media (max-width: 768px) {
   .match-item {
     flex-direction: column;
-    align-items: center;   /* was flex-start */
+    align-items: center;
     gap: 15px;
-  }
-
-  .match-competition {
-    order: 1;
-    align-self: center;
   }
 
   .match-info {
@@ -1633,42 +1628,48 @@ html {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* was flex-start */
+    align-items: center;
     gap: 15px;
   }
 
+  /* === KRİTİK DÜZELTME: GRID MERKEZLEME === */
   .match-teams {
     width: 100%;
-    display: flex;
-    justify-content: center;  /* was flex-start */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* sol | VS | sağ */
+    column-gap: 12px;
     align-items: center;
+    justify-items: center;
     text-align: center;
-    margin: 0 auto;
-    gap: 15px;
   }
 
-  .team {
-    display: flex;
+  .match-teams .team {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;  /* keep names centered around logos */
     gap: 8px;
+    white-space: nowrap;           /* taşmayı engelle: tek satır */
   }
 
-  .match-date {
-    order: 3;
-    align-self: center;
+  .match-teams .team:first-child {
+    justify-self: end;             /* sol takım sağa yaslanır */
+    text-align: right;
   }
 
-  .calendar-title {
-    font-size: 24px;
+  .match-teams .vs {
+    justify-self: center;          /* VS tam orta */
+    font-weight: 700;
   }
 
-  .match-competition img {
-    height: 40px;
+  .match-teams .team:last-of-type {
+    justify-self: start;           /* sağ takım sola yaslanır */
+    text-align: left;
   }
 
-  .team img {
-    height: 20px;
-    width: auto;
-  }
+  .match-competition { order: 1; align-self: center; }
+  .match-date { order: 3; align-self: center; }
+
+  .calendar-title { font-size: 24px; }
+  .match-competition img { height: 40px; }
+  .team img { height: 20px; width: auto; }
 }
+
