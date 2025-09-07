@@ -1615,11 +1615,11 @@ html {
   color: #C1FF72;
 }
 
-/* === MOBILE FRIENDLY === */
+/* === MOBILE FRIENDLY (fix center alignment) === */
 @media (max-width: 768px) {
   .match-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;   /* was flex-start */
     gap: 15px;
   }
 
@@ -1630,14 +1630,28 @@ html {
 
   .match-info {
     order: 2;
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* was flex-start */
     gap: 15px;
   }
 
   .match-teams {
-    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    justify-content: center;  /* was flex-start */
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    gap: 15px;
+  }
+
+  .team {
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* keep names centered around logos */
+    gap: 8px;
   }
 
   .match-date {
